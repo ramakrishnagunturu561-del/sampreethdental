@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+-------------------------------------------------------------------*/
+
+/* LIBRARIES CSS */
+@import url('bootstrap.css');
+@import url('animate.css');
+
+/* FONTS*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,800italic,700italic,600italic,400italic,300italic);
+@import url('../assets/font-awesome/css/font-awesome.min.html');
+@import url('../assets/flaticon/flaticon.html');
+
+/* PLUGIN CSS */
+@import url('slider-pro.min.html');
+@import url('jquery.fancybox.html');
+@import url('owl.carousel.html');
+@import url('owl.theme.html');
+@import url('owl.transitions.html');
+@import url('bootstrap-datetimepicker.html');
+@import url('jquery.selectBox.html');
+@import url('fontawesome-stars-o.html');
+
+/* CUSTOM CSS */
+@import url('theme.html');
+/*@import url('theme_violet.css');*/
+/*@import url('theme_red.css');*/
+/*@import url('theme_green.css');*/
+@import url('responsive.css');

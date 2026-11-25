@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors | Expert Dental Specialists | Sampreeth Dental Clinic Vijayawada</title>
+  <meta name="description" content="Meet our experienced dental surgeons at Sampreeth Dental Clinic in Patamata, Vijayawada. Dr. Nadella Koteswara Rao (MDS Oral Surgeon) and Dr. Nadella Neelima (BDS Dental Surgeon).">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS & Custom Design System -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            navy: {
+              800: '#0c3559',
+              900: '#092c4c',
+              950: '#061e34',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/modern.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- 1. Top Contact Bar -->
+  <div class="bg-navy-900 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-navy-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center flex-wrap justify-center gap-4 text-center sm:text-left">
+        <span class="inline-flex items-center gap-1.5 text-slate-300">
+          <i class="fa-solid fa-location-dot text-teal-400"></i>
+          #57-6-2, Venkata Sai Enclave, Opp: Sri Chaitanya School, Patamata, Vijayawada
+        </span>
+        <span class="hidden lg:inline-flex items-center gap-1.5 text-slate-400">
+          <i class="fa-regular fa-clock text-teal-400"></i>
+          Mon-Sat: 10AM-1PM & 4:30PM-9PM | Sun: 10AM-1PM
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+917995605888" class="text-teal-400 hover:text-teal-300 font-semibold inline-flex items-center gap-1">
+          <i class="fa-solid fa-phone"></i> +91 79956 05888
+        </a>
+        <a href="https://wa.me/917995605888" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main Navigation -->
+  <header id="main-navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center py-2 group">
+          <img src="img/logo.jpg" alt="Sampreeth Dental Clinic" class="h-16 sm:h-20 w-auto object-contain transition-transform group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="index.html" class="nav-link transition hover:text-teal-600">Home</a>
+          <a href="about.html" class="nav-link transition hover:text-teal-600">About Us</a>
+          <a href="services.html" class="nav-link transition hover:text-teal-600">Treatments</a>
+          <a href="doctors.html" class="nav-link active-page transition hover:text-teal-600">Our Doctors</a>
+          <a href="gallery.html" class="nav-link transition hover:text-teal-600">Gallery</a>
+          <a href="contact.html" class="nav-link transition hover:text-teal-600">Contact</a>
+        </nav>
+
+        <!-- Right Side: Need Help & Book Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="tel:+917995605888" class="hidden xl:flex items-center gap-2.5 text-xs text-left">
+            <div class="w-9 h-9 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center text-sm border border-teal-100">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <span class="block text-[11px] text-slate-500 font-medium">Need Help?</span>
+              <span class="block font-bold text-slate-900">+91 79956 05888</span>
+            </div>
+          </a>
+          <button data-open-modal class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-full shadow-md hover:shadow-teal-600/30 transition transform hover:-translate-y-0.5">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Book Appointment</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-teal-600 p-2 rounded-lg focus:outline-none">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+      <a href="index.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Home</a>
+      <a href="about.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">About Us</a>
+      <a href="services.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Treatments</a>
+      <a href="doctors.html" class="block py-2 font-bold text-teal-600 border-b border-slate-100">Our Doctors</a>
+      <a href="gallery.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Gallery</a>
+      <a href="contact.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Contact</a>
+      <button data-open-modal class="w-full text-center mt-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-xl shadow-md">
+        <i class="fa-regular fa-calendar-check mr-2"></i> Book Appointment
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="page-hero-banner bg-gradient-to-r from-navy-900 via-navy-800 to-teal-900 text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-teal-400 bg-navy-950/80 px-3 py-1 rounded-full border border-teal-800">Our Clinical Experts</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-3 tracking-tight">Meet Our Dental Doctors & Specialists</h1>
+      <p class="text-slate-300 max-w-2xl mx-auto mt-3 text-sm sm:text-base">Dedicated oral healthcare professionals delivering personalized, compassionate, and advanced treatments in Vijayawada.</p>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section class="py-16 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <!-- Doctor 1: Dr. Nadella Koteswara Rao -->
+        <div class="modern-card p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-slate-100">
+              <img src="images/doctor01.jpg" alt="Dr. Nadella Koteswara Rao" class="w-36 h-36 rounded-2xl object-cover object-top shadow-md shrink-0 border-2 border-teal-100">
+              <div class="text-center sm:text-left">
+                <span class="inline-block bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">Oral & Maxillofacial Surgeon</span>
+                <h2 class="text-2xl font-bold text-navy-900">Dr. Nadella Koteswara Rao</h2>
+                <p class="text-teal-600 font-bold text-sm">MDS – Oral & Maxillofacial Surgery</p>
+                <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-hospital mr-1 text-teal-600"></i> Consultant Surgeon & Implantologist</p>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-4 text-sm text-slate-600 leading-relaxed">
+              <p>
+                Dr. Nadella Koteswara Rao is a distinguished Oral & Maxillofacial Surgeon known for surgical precision and clinical acumen. He has extensive expertise in treating complex facial bone trauma, surgical removal of impacted third molars (wisdom teeth), management of jaw pathology (dentigerous cysts and benign tumors), and osseointegrated dental implantology.
+              </p>
+              <h4 class="font-bold text-navy-900 text-xs uppercase tracking-wider text-teal-700">Core Areas of Practice:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-medium text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Impacted Teeth Excision</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Dental Implant Fixtures</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Mandibular & Maxillary Fractures</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Jaw Cysts & Neoplasms</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Bone Grafting & Sinus Lift</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Temporomandibular Joint (TMJ)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock text-teal-600 mr-1"></i> Available for Consultations</span>
+            <button data-open-modal class="bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-md transition">
+              Book Appointment with Dr. Koteswara Rao
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor 2: Dr. Nadella Neelima -->
+        <div class="modern-card p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-slate-100">
+              <img src="images/doctor02.jpg" alt="Dr. Nadella Neelima" class="w-36 h-36 rounded-2xl object-cover object-top shadow-md shrink-0 border-2 border-teal-100">
+              <div class="text-center sm:text-left">
+                <span class="inline-block bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">Dental Surgeon & Aesthetic Specialist</span>
+                <h2 class="text-2xl font-bold text-navy-900">Dr. Nadella Neelima</h2>
+                <p class="text-teal-600 font-bold text-sm">BDS – Dental Surgeon</p>
+                <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-tooth mr-1 text-teal-600"></i> Aesthetic Dentist & Endodontist</p>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-4 text-sm text-slate-600 leading-relaxed">
+              <p>
+                Dr. Nadella Neelima brings a warm, gentle touch to family dental care, cosmetic restorations, and painless root canal treatments. She has dedicated her clinical practice to delivering patient comfort, preventive maintenance, and beautiful natural smile restorations for patients of all age groups.
+              </p>
+              <h4 class="font-bold text-navy-900 text-xs uppercase tracking-wider text-teal-700">Core Areas of Practice:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-medium text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Rotary Root Canal Therapy (RCT)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Aesthetic Teeth Whitening</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Pediatric Preventive Dental Care</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Ceramic Crowns & Fixed Bridges</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Composite Cosmetic Restorations</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Ultrasonic Scaling & Gum Therapy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock text-teal-600 mr-1"></i> Available for Consultations</span>
+            <button data-open-modal class="bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow-md transition">
+              Book Appointment with Dr. Neelima
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Assurance Box -->
+      <div class="mt-14 bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl border border-teal-100 shrink-0">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy-900 text-lg">Hospital-Grade Sterilization & Personalized Approach</h3>
+            <p class="text-slate-600 text-sm">Every procedure is conducted with strict infection control protocols and modern digital diagnostics.</p>
+          </div>
+        </div>
+        <button data-open-modal class="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm px-6 py-3 rounded-full transition shadow-sm shrink-0">
+          <i class="fa-regular fa-calendar-check text-teal-400"></i>
+          <span>Schedule Visit</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Appointment Booking Modal -->
+  <div id="appointment-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-navy-950/80 backdrop-blur-sm hidden p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 relative">
+      <button data-close-modal class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="mb-5 text-center">
+        <span class="text-xs font-bold text-teal-600 uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full">Easy Consultation</span>
+        <h3 class="text-2xl font-extrabold text-navy-900 mt-2">Book an Appointment</h3>
+        <p class="text-xs text-slate-500 mt-1">Fill out the details below to confirm directly with our reception on WhatsApp.</p>
+      </div>
+      <form class="booking-form space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+          <input type="text" name="patient_name" required placeholder="Enter your full name" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-teal-600">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+            <input type="tel" name="patient_phone" required placeholder="e.g. 9876543210" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-teal-600">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Select Doctor</label>
+            <select name="doctor_name" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-teal-600 bg-white">
+              <option value="Dr. Nadella Koteswara Rao">Dr. Nadella Koteswara Rao (MDS)</option>
+              <option value="Dr. Nadella Neelima">Dr. Nadella Neelima (BDS)</option>
+              <option value="Any Available Specialist">Any Available Doctor</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Treatment Type</label>
+            <select name="service_type" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-teal-600 bg-white">
+              <option value="General Consultation">General Consultation</option>
+              <option value="Dental Implants">Dental Implants</option>
+              <option value="Root Canal Treatment">Root Canal Treatment</option>
+              <option value="Wisdom Tooth Removal">Wisdom Tooth Removal</option>
+              <option value="Teeth Whitening">Teeth Whitening</option>
+              <option value="Braces & Aligners">Braces & Aligners</option>
+              <option value="Other Dental Care">Other Dental Care</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Date</label>
+            <input type="date" name="appointment_date" class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-teal-600">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Additional Notes</label>
+          <textarea name="patient_notes" rows="2" placeholder="Briefly describe your dental concern..." class="w-full text-sm px-4 py-2 rounded-xl border border-slate-200 focus:outline-none focus:border-teal-600"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Confirm via WhatsApp Booking</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Professional Footer -->
+  <footer class="bg-navy-950 text-slate-300 mt-auto pt-14 pb-8 border-t border-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-navy-900">
+        
+        <div class="space-y-4">
+          <div class="bg-white p-3 rounded-2xl inline-block shadow-sm">
+            <img src="img/logo.jpg" alt="Sampreeth Dental Clinic" class="h-12 w-auto object-contain">
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Premier dental clinic in Patamata, Vijayawada, offering specialized oral surgery, maxillofacial care, dental implants, root canals, and family dentistry.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-8 h-8 rounded-full bg-navy-900 text-slate-300 hover:text-white hover:bg-teal-600 flex items-center justify-center text-sm transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-navy-900 text-slate-300 hover:text-white hover:bg-teal-600 flex items-center justify-center text-sm transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/917995605888" target="_blank" class="w-8 h-8 rounded-full bg-navy-900 text-slate-300 hover:text-white hover:bg-emerald-600 flex items-center justify-center text-sm transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-teal-500 pl-2">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-teal-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-teal-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-teal-400 transition">Treatments & Services</a></li>
+            <li><a href="doctors.html" class="hover:text-teal-400 transition">Our Doctors</a></li>
+            <li><a href="gallery.html" class="hover:text-teal-400 transition">Clinic Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400 transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-teal-500 pl-2">Treatments</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html#implants" class="hover:text-teal-400 transition">Dental Implants</a></li>
+            <li><a href="services.html#rct" class="hover:text-teal-400 transition">Root Canal Treatment (RCT)</a></li>
+            <li><a href="services.html#wisdom" class="hover:text-teal-400 transition">Wisdom Teeth & Jaw Surgery</a></li>
+            <li><a href="services.html#whitening" class="hover:text-teal-400 transition">Teeth Whitening & Scaling</a></li>
+            <li><a href="services.html#braces" class="hover:text-teal-400 transition">Orthodontics & Aligners</a></li>
+            <li><a href="services.html#pediatric" class="hover:text-teal-400 transition">Pediatric Dental Care</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-teal-500 pl-2">Visit Clinic</h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-teal-400 mt-1"></i>
+              <span>#57-6-2, Venkata Sai Enclave, Opp: Sri Chaitanya School, Patamata, Vijayawada - 520010</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-phone text-teal-400"></i>
+              <a href="tel:+917995605888" class="hover:text-teal-300 font-semibold">+91 79956 05888</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-envelope text-teal-400"></i>
+              <a href="mailto:info@sampreethdentalclinic.com" class="hover:text-teal-300">info@sampreethdentalclinic.com</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-regular fa-clock text-teal-400 mt-1"></i>
+              <span>Mon-Sat: 10:00 AM – 1:00 PM & 4:30 PM – 9:00 PM<br>Sun: 10:00 AM – 1:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 Sampreeth Dental Clinic. All Rights Reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/modern.js"></script>
+</body>
+</html>

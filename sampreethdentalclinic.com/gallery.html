@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smile Transformations & Clinic Gallery | Sampreeth Dental Clinic Vijayawada</title>
+  <meta name="description" content="View real before & after dental smile transformations, clinic facilities, and doctor certifications at Sampreeth Dental Clinic, Vijayawada.">
+  <meta name="keywords" content="Dental Before and After Vijayawada, Teeth Whitening Results, Braces Before After, Sampreeth Dental Gallery">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS & Custom Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            navy: {
+              800: '#0c3559',
+              900: '#092c4c',
+              950: '#061e34',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/modern.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- Top Info Bar -->
+  <div class="bg-navy-900 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-navy-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center flex-wrap justify-center gap-4 text-center sm:text-left">
+        <span class="inline-flex items-center gap-1.5 text-slate-300">
+          <i class="fa-solid fa-location-dot text-teal-400"></i>
+          #57-6-2, Venkata Sai Enclave, Opp: Sri Chaitanya School, Patamata, Vijayawada
+        </span>
+        <span class="hidden lg:inline-flex items-center gap-1.5 text-slate-400">
+          <i class="fa-regular fa-clock text-teal-400"></i>
+          Mon-Sat: 10AM-1PM & 4:30PM-9PM | Sun: 10AM-1PM
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+917995605888" class="inline-flex items-center gap-1.5 text-teal-400 hover:text-teal-300 font-semibold transition">
+          <i class="fa-solid fa-phone"></i> +91 79956 05888
+        </a>
+        <a href="https://wa.me/917995605888" target="_blank" class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+        <a href="mailto:drnadellaneelima@gmail.com" class="email-trigger inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition" title="Click to email or copy">
+          <i class="fa-regular fa-envelope text-teal-400"></i>
+          <span>drnadellaneelima@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header id="main-navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center py-2 group">
+          <img src="img/logo.jpg" alt="Sampreeth Dental Clinic - Healthy Smiles, Brighter Lives" class="h-16 sm:h-20 w-auto object-contain transition-transform group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="index.html" class="nav-link transition hover:text-teal-600">Home</a>
+          <a href="about.html" class="nav-link transition hover:text-teal-600">About Us</a>
+          <a href="services.html" class="nav-link transition hover:text-teal-600">Treatments</a>
+          <a href="doctors.html" class="nav-link transition hover:text-teal-600">Our Doctors</a>
+          <a href="gallery.html" class="nav-link active-page transition hover:text-teal-600">Gallery</a>
+          <a href="contact.html" class="nav-link transition hover:text-teal-600">Contact</a>
+        </nav>
+
+        <!-- Right Side: Need Help Pill & Book Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="tel:+917995605888" class="hidden xl:flex items-center gap-2.5 text-xs text-left">
+            <div class="w-9 h-9 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center text-sm border border-teal-100">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <span class="block text-[11px] text-slate-500 font-medium">Need Help?</span>
+              <span class="block font-bold text-slate-900">+91 79956 05888</span>
+            </div>
+          </a>
+          <button data-open-modal class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-full shadow-md hover:shadow-teal-600/30 transition transform hover:-translate-y-0.5">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Book Appointment</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-teal-600 p-2 rounded-lg focus:outline-none">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+      <a href="index.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Home</a>
+      <a href="about.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">About Us</a>
+      <a href="services.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Treatments</a>
+      <a href="doctors.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Our Doctors</a>
+      <a href="gallery.html" class="block py-2 font-bold text-teal-600 border-b border-slate-100">Gallery</a>
+      <a href="contact.html" class="block py-2 font-medium text-slate-700 hover:text-teal-600 border-b border-slate-100">Contact</a>
+      <button data-open-modal class="w-full text-center mt-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-xl shadow-md">
+        <i class="fa-regular fa-calendar-check mr-2"></i> Book Appointment
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="page-hero-banner bg-gradient-to-r from-navy-900 via-navy-800 to-teal-900 text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-teal-400 bg-navy-950/80 px-3 py-1 rounded-full border border-teal-800">Visual Portfolio</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-3 tracking-tight">Smile Transformations & Clinic Facilities</h1>
+      <p class="text-slate-300 max-w-2xl mx-auto mt-3 text-sm sm:text-base">Real clinical before & after cases, hospital-grade operatory setups, and verified certifications.</p>
+    </div>
+  </section>
+
+  <!-- Filter Navigation Tabs -->
+  <div class="py-6 bg-white border-b border-slate-200 sticky top-24 z-30 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-bold">
+      <button class="gallery-filter-btn active bg-sky-600 text-white px-5 py-2 rounded-full transition shadow-sm" data-filter="all">All Items</button>
+      <button class="gallery-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2 rounded-full transition" data-filter="filter-cases">Before & After Sliders</button>
+      <button class="gallery-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2 rounded-full transition" data-filter="filter-clinic">Clinic & Technology</button>
+      <button class="gallery-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2 rounded-full transition" data-filter="filter-certs">Doctor Credentials</button>
+    </div>
+  </div>
+
+  <!-- Main Gallery Grid -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Case 1 -->
+        <div class="gallery-item filter-cases bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover-lift">
+          <div class="ba-container">
+            <img src="images/story/stories1.jpg" alt="After Treatment 1">
+            <div class="ba-overlay">
+              <img src="images/story/stories01.jpg" alt="Before Treatment 1">
+            </div>
+            <div class="ba-slider">
+              <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+              <span class="font-bold text-sky-600 uppercase">Case 01</span>
+              <span>Drag to compare</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Teeth Whitening & Calculus Removal</h4>
+            <p class="text-xs text-slate-600 mt-1">Complete removal of stubborn nicotine and extrinsic stains, restoring original tooth brightness.</p>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="gallery-item filter-cases bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover-lift">
+          <div class="ba-container">
+            <img src="images/story/stories2.jpg" alt="After Treatment 2">
+            <div class="ba-overlay">
+              <img src="images/story/stories02.jpg" alt="Before Treatment 2">
+            </div>
+            <div class="ba-slider">
+              <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+              <span class="font-bold text-sky-600 uppercase">Case 02</span>
+              <span>Drag to compare</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Orthodontic Bite Realignment</h4>
+            <p class="text-xs text-slate-600 mt-1">Correction of anterior crowded bite and crooked teeth using modern orthodontic brackets.</p>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="gallery-item filter-cases bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover-lift">
+          <div class="ba-container">
+            <img src="images/story/stories3.jpg" alt="After Treatment 3">
+            <div class="ba-overlay">
+              <img src="images/story/stories03.jpg" alt="Before Treatment 3">
+            </div>
+            <div class="ba-slider">
+              <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+              <span class="font-bold text-sky-600 uppercase">Case 03</span>
+              <span>Drag to compare</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Cosmetic Enamel Brightening</h4>
+            <p class="text-xs text-slate-600 mt-1">Ultrasonic prophylaxis and gentle in-office dental bleach restoration.</p>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="gallery-item filter-cases bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover-lift">
+          <div class="ba-container">
+            <img src="images/story/stories4.jpg" alt="After Treatment 4">
+            <div class="ba-overlay">
+              <img src="images/story/stories04.jpg" alt="Before Treatment 4">
+            </div>
+            <div class="ba-slider">
+              <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+              <span class="font-bold text-sky-600 uppercase">Case 04</span>
+              <span>Drag to compare</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Smile Makeover & Alignment</h4>
+            <p class="text-xs text-slate-600 mt-1">Restoring arch harmony, aesthetic spacing closure, and smile confidence.</p>
+          </div>
+        </div>
+
+        <!-- Case 5 -->
+        <div class="gallery-item filter-cases bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover-lift">
+          <div class="ba-container">
+            <img src="images/story/stories5.jpg" alt="After Treatment 5">
+            <div class="ba-overlay">
+              <img src="images/story/stories05.jpg" alt="Before Treatment 5">
+            </div>
+            <div class="ba-slider">
+              <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+              <span class="font-bold text-sky-600 uppercase">Case 05</span>
+              <span>Drag to compare</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Full Arch Scaling & Polishing</h4>
+            <p class="text-xs text-slate-600 mt-1">Gingival health restoration with deep subgingival tartar removal.</p>
+          </div>
+        </div>
+
+        <!-- Clinic Image 1 -->
+        <div class="gallery-item filter-clinic bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/slide_01.jpg" data-lightbox data-caption="Advanced Dental Operatory Room" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/slide_01.jpg" alt="Operatory" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Full Image</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Facility</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Modern Dental Operatory Suite</h4>
+          </div>
+        </div>
+
+        <!-- Clinic Image 2 -->
+        <div class="gallery-item filter-clinic bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/image6.jpg" data-lightbox data-caption="Clinical Consultation & Examination" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/image6.jpg" alt="Consultation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Full Image</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Consultation</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Patient Consultation Room</h4>
+          </div>
+        </div>
+
+        <!-- Clinic Image 3 -->
+        <div class="gallery-item filter-clinic bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/image7.jpg" data-lightbox data-caption="Digital Radiography & Diagnostics" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/image7.jpg" alt="Diagnostics" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Full Image</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Technology</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Diagnostic & Surgical Equipment</h4>
+          </div>
+        </div>
+
+        <!-- Clinic Image 4 -->
+        <div class="gallery-item filter-clinic bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/image11.jpg" data-lightbox data-caption="Hospital-Grade Sterilization Protocols" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/image11.jpg" alt="Sterilization" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Full Image</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Hygiene</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Sterilization & Hygiene Wing</h4>
+          </div>
+        </div>
+
+        <!-- Certificate 1 -->
+        <div class="gallery-item filter-certs bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/Dr_Neelima_0001.jpg" data-lightbox data-caption="Dr. Nadella Neelima - Registration & Degree" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/Dr_Neelima_0001.jpg" alt="Dr. Neelima Degree" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Certificate</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Credential</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Dr. Neelima - Council Registration</h4>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="gallery-item filter-certs bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/koteswara_rao_002.jpg" data-lightbox data-caption="Dr. Nadella Koteswara Rao - Maxillofacial Registration" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/koteswara_rao_002.jpg" alt="Dr. Koteswara Rao Registration" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Certificate</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Credential</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Dr. Koteswara Rao - Council Registration</h4>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="gallery-item filter-certs bg-white rounded-2xl p-3 border border-slate-200 shadow-sm hover-lift">
+          <a href="images/Dr_NKR_page-0001.jpg" data-lightbox data-caption="Dr. Nadella Koteswara Rao - Master of Dental Surgery (MDS)" class="block h-64 rounded-xl overflow-hidden bg-slate-100 group relative">
+            <img src="images/Dr_NKR_page-0001.jpg" alt="Dr. NKR MDS Degree" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+              <span class="bg-white/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Certificate</span>
+            </div>
+          </a>
+          <div class="p-3">
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider">Credential</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Dr. NKR - MDS Specialist Degree</h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-gradient-to-r from-sky-600 to-teal-600 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <h3 class="text-2xl sm:text-3xl font-extrabold">Ready to Transform Your Smile?</h3>
+      <p class="text-sky-100 text-sm max-w-xl mx-auto">Get an in-person smile evaluation and customized treatment plan tailored to your health and budget.</p>
+      <div class="pt-2">
+        <button data-open-modal class="bg-white text-slate-900 hover:bg-slate-100 font-bold px-7 py-3 rounded-full shadow-lg transition">
+          Book Consultation Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 text-slate-300 text-xs border-t border-navy-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Col 1: Logo & Mission -->
+        <div class="space-y-4">
+          <a href="index.html" class="inline-block bg-white p-3 rounded-2xl shadow-xs border border-slate-800">
+            <img src="img/logo.jpg" alt="Sampreeth Dental Clinic" class="h-14 sm:h-16 w-auto object-contain">
+          </a>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Providing team-based, world-class dental care and maxillofacial surgical solutions in Vijayawada for children and adults.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-400 space-y-1.5">
+            <p><i class="fa-solid fa-location-dot text-teal-400 mr-1.5"></i> #57-6-2, Venkata Sai Enclave, Patamata, Vijayawada</p>
+            <p><i class="fa-solid fa-phone text-teal-400 mr-1.5"></i> <a href="tel:+917995605888" class="hover:text-white">+91 79956 05888</a></p>
+            <p><i class="fa-regular fa-envelope text-teal-400 mr-1.5"></i> <a href="mailto:drnadellaneelima@gmail.com" class="email-trigger hover:text-white font-medium text-teal-300">drnadellaneelima@gmail.com</a></p>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-teal-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-teal-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-teal-400 transition">Treatments</a></li>
+            <li><a href="doctors.html" class="hover:text-teal-400 transition">Our Doctors</a></li>
+            <li><a href="gallery.html" class="hover:text-teal-400 transition">Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Treatments -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Our Treatments</h4>
+          <ul class="space-y-2">
+            <li><a href="services.html" class="hover:text-teal-400 transition">General Dentistry</a></li>
+            <li><a href="services.html#rct" class="hover:text-teal-400 transition">Root Canal Treatment</a></li>
+            <li><a href="services.html#whitening" class="hover:text-teal-400 transition">Teeth Whitening</a></li>
+            <li><a href="services.html#implants" class="hover:text-teal-400 transition">Dental Implants</a></li>
+            <li><a href="services.html#orthodontics" class="hover:text-teal-400 transition">Orthodontics & Braces</a></li>
+            <li><a href="services.html#cosmetic" class="hover:text-teal-400 transition">Cosmetic Dentistry</a></li>
+            <li><a href="services.html#pediatric" class="hover:text-teal-400 transition">Pediatric Dentistry</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Follow Us & Handwritten Script Accent -->
+        <div class="space-y-5">
+          <div>
+            <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-3">Follow Us</h4>
+            <div class="flex items-center gap-2.5">
+              <a href="#" class="w-8 h-8 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition">
+                <i class="fa-brands fa-facebook-f text-xs"></i>
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-pink-600 hover:bg-pink-700 text-white flex items-center justify-center transition">
+                <i class="fa-brands fa-instagram text-xs"></i>
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center transition">
+                <i class="fa-brands fa-youtube text-xs"></i>
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition">
+                <i class="fa-brands fa-linkedin-in text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <span class="font-script text-2xl text-teal-400 font-bold block">
+              A Healthier Smile, A Happier You ♡
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-navy-900 flex flex-col sm:flex-row items-center justify-between text-slate-500 gap-3 text-[11px]">
+        <p>© 2026 Sampreeth Dental Clinic. All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:underline">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Action Bar for Mobile -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+917995605888" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-2.5 px-3 rounded-lg text-center text-xs flex items-center justify-center gap-1.5 shadow">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call Now</span>
+    </a>
+    <a href="https://wa.me/917995605888" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-lg text-center text-xs flex items-center justify-center gap-1.5 shadow">
+      <i class="fa-brands fa-whatsapp text-sm"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button data-open-modal class="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-lg text-center text-xs flex items-center justify-center gap-1.5 shadow">
+      <i class="fa-regular fa-calendar-check"></i>
+      <span>Book</span>
+    </button>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center">
+      <button class="lightbox-close absolute -top-10 right-0 text-white hover:text-sky-400 text-2xl focus:outline-none">
+        <i class="fa-solid fa-xmark"></i> Close
+      </button>
+      <img id="lightbox-img" src="" alt="Enlarged Item" class="lightbox-content bg-white p-2">
+      <p id="lightbox-caption" class="text-white text-sm font-semibold mt-3 text-center"></p>
+    </div>
+  </div>
+
+  <!-- Appointment Booking Modal -->
+  <div id="appointment-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 max-h-[90vh] overflow-y-auto">
+      <button data-close-modal class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 text-xl focus:outline-none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-5">
+        <span class="text-xs font-bold text-sky-600 uppercase tracking-widest">Book Your Visit</span>
+        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Schedule an Appointment</h3>
+        <p class="text-xs text-slate-500 mt-1">Our clinic receptionist will confirm your slot directly.</p>
+      </div>
+
+      <form class="booking-form space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Patient Full Name *</label>
+          <input type="text" name="patient_name" required placeholder="Enter full name" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Contact Phone Number *</label>
+          <input type="tel" name="patient_phone" required placeholder="e.g. 98765 43210" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Select Doctor</label>
+            <select name="doctor_name" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="Dr Nadella Koteswara Rao (Oral & Maxillofacial Surgeon)">Dr. Nadella Koteswara Rao</option>
+              <option value="Dr Nadella Neelima (Dental Surgeon)">Dr. Nadella Neelima</option>
+              <option value="Any Specialist">Any Available Doctor</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Treatment Required</label>
+            <select name="service_type" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="General Consultation">General Consultation</option>
+              <option value="Teeth Whitening & Cleaning">Teeth Whitening & Cleaning</option>
+              <option value="Dental Implants">Dental Implants</option>
+              <option value="Root Canal Treatment">Root Canal Treatment</option>
+              <option value="Braces & Aligners">Braces & Aligners</option>
+              <option value="Wisdom Tooth Extraction">Wisdom Tooth Extraction</option>
+              <option value="Child Dentistry">Child Dentistry</option>
+              <option value="Dentures / Crown">Dentures or Crown</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Date</label>
+            <input type="date" name="appointment_date" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-sky-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Time Slot</label>
+            <select name="appointment_time" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="Morning (10AM - 1PM)">Morning (10AM - 1PM)</option>
+              <option value="Evening (4:30PM - 9PM)">Evening (4:30PM - 9PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Additional Notes (Optional)</label>
+          <textarea name="patient_notes" rows="2" placeholder="Mention symptoms or any dental history..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 rounded-lg shadow-md transition flex items-center justify-center gap-2 text-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Confirm & Send via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Email Action Modal (Ensures 100% Reliable Email Functionality) -->
+  <div id="email-action-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative border border-slate-100">
+      <button data-close-email-modal class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 text-xl focus:outline-none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl mx-auto mb-3 border border-teal-100 shadow-xs">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <h3 class="text-xl font-extrabold text-navy-900">Email Sampreeth Dental</h3>
+        <p class="text-xs text-slate-500 mt-1">Choose how you would like to send your email inquiry:</p>
+        <div class="mt-3 p-2.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-800">
+          <span class="truncate">drnadellaneelima@gmail.com</span>
+          <button data-copy-email class="text-teal-600 hover:text-teal-700 ml-2 shrink-0 flex items-center gap-1 font-bold">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <button data-open-gmail class="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2.5 text-xs sm:text-sm">
+          <i class="fa-brands fa-google text-base"></i>
+          <span>Open in Gmail (Web Browser)</span>
+        </button>
+
+        <a href="mailto:drnadellaneelima@gmail.com" class="w-full bg-navy-900 hover:bg-navy-800 text-white font-bold py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2.5 text-xs sm:text-sm">
+          <i class="fa-solid fa-envelope-open-text text-base"></i>
+          <span>Open in Outlook / Mail App</span>
+        </a>
+
+        <button data-copy-email class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-xs">
+          <i class="fa-regular fa-copy"></i>
+          <span>Copy Email Address to Clipboard</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/modern.js"></script>
+</body>
+</html>
