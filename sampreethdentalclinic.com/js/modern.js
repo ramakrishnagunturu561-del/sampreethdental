@@ -89,13 +89,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Appointment Booking Modal & Form Handling with WhatsApp Quick Book
   const appointmentModal = document.getElementById('appointment-modal');
 
-  // Synchronize and dynamically populate all doctor dropdowns from SAMPREETH_DOCTORS
+  // Synchronize and dynamically populate all doctor dropdowns from SAMPREETH_DOCTORS with timings
+  const updateDoctorTimingDisplay = (selectElement) => {
+    if (!selectElement) return;
+    const parentContainer = selectElement.closest('form') || selectElement.parentElement;
+    let timingBadge = parentContainer?.querySelector('.doctor-timing-badge');
+    const selectedVal = selectElement.value;
+
+    const matchedDoc = (window.SAMPREETH_DOCTORS || []).find(d => 
+      selectedVal.includes(d.name) || selectedVal.includes(d.badge)
+    );
+
+    if (matchedDoc && matchedDoc.availability) {
+      if (!timingBadge) {
+        timingBadge = document.createElement('div');
+        timingBadge.className = 'doctor-timing-badge text-[11px] font-semibold text-teal-800 bg-teal-50 border border-teal-200/90 rounded-lg p-2 mt-1.5 flex items-start gap-1.5';
+        selectElement.parentNode.insertBefore(timingBadge, selectElement.nextSibling);
+      }
+      timingBadge.innerHTML = `<i class="fa-regular fa-clock text-teal-600 mt-0.5 shrink-0"></i> <span><strong>Doctor Timings:</strong> ${matchedDoc.availability}</span>`;
+      timingBadge.style.display = 'flex';
+    } else if (timingBadge) {
+      timingBadge.style.display = 'none';
+    }
+  };
+
   const populateDoctorDropdowns = () => {
     if (typeof SAMPREETH_DOCTORS === 'undefined' || !Array.isArray(SAMPREETH_DOCTORS)) return;
 
     document.querySelectorAll('select[name="doctor_name"]').forEach(select => {
       const currentValue = select.value;
-      // Preserve first "Any Available" if present, or create clean options list
       select.innerHTML = '';
       
       const defaultOption = document.createElement('option');
@@ -113,29 +135,34 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentValue && select.querySelector(`option[value="${currentValue}"]`)) {
         select.value = currentValue;
       }
+
+      select.addEventListener('change', () => {
+        updateDoctorTimingDisplay(select);
+      });
+      updateDoctorTimingDisplay(select);
     });
   };
 
   populateDoctorDropdowns();
 
-  document.querySelectorAll('[data-open-modal]').forEach(btn => {
+  // Unified Handler for Book Consultation / Book Appointment buttons (Pre-selects doctor)
+  document.querySelectorAll('[data-open-modal], [data-doctor]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      const targetDoctor = btn.getAttribute('data-doctor');
+      
       if (appointmentModal) {
-        // If button specifies a doctor, pre-select it
-        const targetDoctor = btn.getAttribute('data-doctor');
-        if (targetDoctor) {
-          const doctorSelect = appointmentModal.querySelector('select[name="doctor_name"]');
-          if (doctorSelect) {
-            for (let i = 0; i < doctorSelect.options.length; i++) {
-              if (doctorSelect.options[i].value.includes(targetDoctor) || doctorSelect.options[i].text.includes(targetDoctor)) {
-                doctorSelect.selectedIndex = i;
-                break;
-              }
+        appointmentModal.classList.remove('hidden');
+        const doctorSelect = appointmentModal.querySelector('select[name="doctor_name"]');
+        if (doctorSelect && targetDoctor) {
+          for (let i = 0; i < doctorSelect.options.length; i++) {
+            if (doctorSelect.options[i].value.includes(targetDoctor) || doctorSelect.options[i].text.includes(targetDoctor)) {
+              doctorSelect.selectedIndex = i;
+              break;
             }
           }
+          updateDoctorTimingDisplay(doctorSelect);
         }
-        appointmentModal.classList.remove('hidden');
       }
     });
   });
@@ -304,7 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 8. Universal Email Click Handler & Toast Notification
-  const clinicEmail = 'drnadellaneelima@gmail.com';
+  const defaultClinicEmail = 'drnadellaneelima@gmail.com';
+  let activeTargetEmail = defaultClinicEmail;
 
   const showToast = (text) => {
     let toast = document.getElementById('global-toast');
@@ -322,10 +350,11 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.copyClinicEmail = () => {
-    navigator.clipboard?.writeText(clinicEmail).then(() => {
-      showToast(`Email copied: ${clinicEmail}`);
+    const emailToCopy = activeTargetEmail || defaultClinicEmail;
+    navigator.clipboard?.writeText(emailToCopy).then(() => {
+      showToast(`Email copied: ${emailToCopy}`);
     }).catch(() => {
-      showToast(`Clinic Email: ${clinicEmail}`);
+      showToast(`Email: ${emailToCopy}`);
     });
   };
 
@@ -334,29 +363,39 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="mailto:"], .email-trigger').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
-      // Copy email to clipboard immediately
-      navigator.clipboard?.writeText(clinicEmail);
+      const href = el.getAttribute('href') || '';
+      let specificEmail = defaultClinicEmail;
+      if (href.startsWith('mailto:')) {
+        specificEmail = href.replace('mailto:', '').trim();
+      }
+      activeTargetEmail = specificEmail;
 
-      // Open email modal or direct fallback
+      // Copy email to clipboard immediately
+      navigator.clipboard?.writeText(activeTargetEmail);
+
+      // Update modal display text if present
       if (emailModal) {
+        const emailSpan = emailModal.querySelector('.truncate');
+        if (emailSpan) emailSpan.textContent = activeTargetEmail;
         emailModal.classList.remove('hidden');
       } else {
         // Direct option popup or fallback to Gmail Web
-        const openGmail = confirm(`Sampreeth Dental Clinic Email:\n${clinicEmail}\n\nEmail address copied to clipboard!\n\nClick OK to open Gmail in your browser, or Cancel to open your default mail app.`);
+        const openGmail = confirm(`Email: ${activeTargetEmail}\n\nEmail address copied to clipboard!\n\nClick OK to open Gmail in your browser, or Cancel to open your default mail app.`);
         if (openGmail) {
-          window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(clinicEmail)}&su=${encodeURIComponent('Inquiry: Sampreeth Dental Clinic Vijayawada')}`, '_blank');
+          window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(activeTargetEmail)}&su=${encodeURIComponent('Inquiry: Sampreeth Dental Clinic Vijayawada')}`, '_blank');
         } else {
-          window.location.href = `mailto:${clinicEmail}`;
+          window.location.href = `mailto:${activeTargetEmail}`;
         }
       }
-      showToast(`Email copied: ${clinicEmail}`);
+      showToast(`Email copied: ${activeTargetEmail}`);
     });
   });
 
   // Email action modal button handlers
   document.querySelectorAll('[data-open-gmail]').forEach(btn => {
     btn.addEventListener('click', () => {
-      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(clinicEmail)}&su=${encodeURIComponent('Inquiry: Sampreeth Dental Clinic Vijayawada')}`, '_blank');
+      const emailToSend = activeTargetEmail || defaultClinicEmail;
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailToSend)}&su=${encodeURIComponent('Inquiry: Sampreeth Dental Clinic Vijayawada')}`, '_blank');
       if (emailModal) emailModal.classList.add('hidden');
     });
   });
@@ -379,4 +418,30 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === emailModal) emailModal.classList.add('hidden');
     });
   }
+
+  // 9. Floating Scroll-To-Top Button (Inject & Control across website)
+  let scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+  if (!scrollToTopBtn) {
+    scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.id = 'scroll-to-top-btn';
+    scrollToTopBtn.className = 'scroll-to-top-btn';
+    scrollToTopBtn.setAttribute('aria-label', 'Scroll back to top');
+    scrollToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up text-base"></i>';
+    document.body.appendChild(scrollToTopBtn);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 350) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });

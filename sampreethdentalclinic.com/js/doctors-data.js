@@ -21,8 +21,9 @@ const SAMPREETH_DOCTORS = [
       "Bone Grafting & Sinus Lift",
       "Temporomandibular Joint (TMJ)"
     ],
-    email: "drnadellaneelima@gmail.com",
-    availability: "Mon-Sat: 10AM-1PM & 4:30PM-9PM | Sun: 10AM-1PM",
+    email: "drnadellakoteswararao@gmail.com",
+    availability: "Mon-Sat: 10:00 AM – 1:00 PM & 4:30 PM – 9:00 PM | Sun: 10:00 AM – 1:00 PM",
+    timingShort: "Mon-Sat: 10AM-1PM & 4:30PM-9PM | Sun: 10AM-1PM",
     dropdownLabel: "Dr. Nadella Koteswara Rao (MDS – Maxillofacial Surgeon)"
   },
   {
@@ -43,7 +44,8 @@ const SAMPREETH_DOCTORS = [
       "Ultrasonic Scaling & Gum Therapy"
     ],
     email: "drnadellaneelima@gmail.com",
-    availability: "Mon-Sat: 10AM-1PM & 4:30PM-9PM | Sun: 10AM-1PM",
+    availability: "Mon-Sat: 10:00 AM – 1:00 PM & 4:30 PM – 9:00 PM | Sun: 10:00 AM – 1:00 PM",
+    timingShort: "Mon-Sat: 10AM-1PM & 4:30PM-9PM | Sun: 10AM-1PM",
     dropdownLabel: "Dr. Nadella Neelima (BDS – Dental Surgeon)"
   },
   {
@@ -61,8 +63,9 @@ const SAMPREETH_DOCTORS = [
       "Malocclusion & Bite Alignment",
       "Dentofacial Orthopedics"
     ],
-    email: "drnadellaneelima@gmail.com",
-    availability: "By Specialty Appointment",
+    email: "drkirankumardodda@gmail.com",
+    availability: "Consultant Slot: Tue & Fri: 4:30 PM – 8:00 PM (By Appointment)",
+    timingShort: "Tue & Fri: 4:30PM – 8PM (By Appointment)",
     dropdownLabel: "Dr. Kiran Kumar Dodda (Orthodontics & Aligners)"
   },
   {
@@ -80,8 +83,9 @@ const SAMPREETH_DOCTORS = [
       "Implant Supported Overdentures",
       "Zirconia & Ceramic Crowns"
     ],
-    email: "drnadellaneelima@gmail.com",
-    availability: "By Specialty Appointment",
+    email: "drsrikanthkoya@gmail.com",
+    availability: "Consultant Slot: Wed & Sat: 4:30 PM – 8:00 PM (By Appointment)",
+    timingShort: "Wed & Sat: 4:30PM – 8PM (By Appointment)",
     dropdownLabel: "Dr. Srikanth Koya (Prosthodontics & Rehabilitation)"
   },
   {
@@ -99,8 +103,9 @@ const SAMPREETH_DOCTORS = [
       "Pediatric Pulpectomy & Crowns",
       "Early Interceptive Orthodontics"
     ],
-    email: "drnadellaneelima@gmail.com",
-    availability: "By Specialty Appointment",
+    email: "drravikiranv@gmail.com",
+    availability: "Consultant Slot: Mon & Thu: 4:30 PM – 8:00 PM (By Appointment)",
+    timingShort: "Mon & Thu: 4:30PM – 8PM (By Appointment)",
     dropdownLabel: "Dr. Ravi Kiran V (Pediatric & Child Dentistry)"
   },
   {
@@ -118,8 +123,9 @@ const SAMPREETH_DOCTORS = [
       "Endodontic Re-treatment",
       "Conservative Restorations"
     ],
-    email: "drnadellaneelima@gmail.com",
-    availability: "By Specialty Appointment",
+    email: "drsatyakarthik@gmail.com",
+    availability: "Consultant Slot: Mon-Sat: 5:00 PM – 8:30 PM (By Appointment)",
+    timingShort: "Mon-Sat: 5:00PM – 8:30PM (By Appointment)",
     dropdownLabel: "Dr. Satya Karthik M (Endodontics & RCT)"
   },
   {
@@ -137,8 +143,9 @@ const SAMPREETH_DOCTORS = [
       "Cosmetic Gum Contouring",
       "Deep Scaling & Root Planing"
     ],
-    email: "drnadellaneelima@gmail.com",
-    availability: "By Specialty Appointment",
+    email: "drprasanna.perio@gmail.com",
+    availability: "Consultant Slot: Wed & Sat: 11:00 AM – 2:00 PM (By Appointment)",
+    timingShort: "Wed & Sat: 11:00AM – 2:00PM (By Appointment)",
     dropdownLabel: "Dr. Prasanna (Periodontics & Gum Care)"
   }
 ];

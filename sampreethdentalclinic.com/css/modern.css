@@ -30,18 +30,21 @@
 }
 
 html {
-  font-size: 17px; /* Scaled up from standard 16px */
+  font-size: 17px;
+  /* Scaled up from standard 16px */
 }
 
 @media (min-width: 1280px) {
   html {
-    font-size: 18px; /* High-res and desktop enlargement */
+    font-size: 18px;
+    /* High-res and desktop enlargement */
   }
 }
 
 @media (min-width: 1536px) {
   html {
-    font-size: 18.5px; /* Large desktop screen enlargement */
+    font-size: 18.5px;
+    /* Large desktop screen enlargement */
   }
 }
 
@@ -55,7 +58,8 @@ body {
 
 /* Broaden max container width across website for larger, fuller layout */
 .max-w-7xl {
-  max-width: 88rem !important; /* 1408px expanded layout */
+  max-width: 88rem !important;
+  /* 1408px expanded layout */
 }
 
 /* Navy Theme Utilities & Fallbacks (Ensures instant styling before/without JS config) */
@@ -548,4 +552,41 @@ h6 {
 .toast-notice.show {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Scroll To Top Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 9999px;
+  background: #092c4c;
+  color: #ffffff;
+  border: 2px solid #0d9488;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(9, 44, 76, 0.25);
+  cursor: pointer;
+  z-index: 45;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+  background: #0d9488;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(13, 148, 136, 0.35);
 }
