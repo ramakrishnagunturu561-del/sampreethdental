@@ -275,79 +275,144 @@
 
       </div>
 
-      <!-- Associate Specialists Panel -->
-      <div class="mt-14 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-100 gap-4">
+      <!-- Associate Specialists Panel (Expanded & Enlarged) -->
+      <div class="mt-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-slate-100 gap-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-teal-600 bg-teal-50 px-3 py-1 rounded-full border border-teal-200">Multidisciplinary Team</span>
-            <h4 class="font-extrabold text-navy-900 text-xl sm:text-2xl mt-1">Visiting Specialists & Expert Panel</h4>
-            <p class="text-xs text-slate-500 mt-0.5">Specialized consultant doctors collaborating with Sampreeth Dental Clinic for multi-disciplinary care:</p>
+            <span class="text-xs font-bold uppercase tracking-widest text-teal-600 bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200 shadow-xs">Multidisciplinary Team</span>
+            <h4 class="font-extrabold text-navy-900 text-2xl sm:text-3xl mt-2.5">Visiting Specialists & Expert Panel</h4>
+            <p class="text-sm text-slate-600 mt-1">Specialized consultant dental doctors collaborating with Sampreeth Dental Clinic for advanced multi-disciplinary care:</p>
           </div>
-          <a href="doctors.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-600 hover:text-teal-700 bg-teal-50 px-4 py-2 rounded-full border border-teal-200 hover:bg-teal-100 transition shrink-0">
+          <a href="doctors.html" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-teal-700 hover:text-white bg-teal-50 hover:bg-teal-600 px-5 py-2.5 rounded-full border border-teal-200 transition shrink-0 shadow-xs">
             <span>View All Doctors & Credentials</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
           
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between hover:border-teal-300 hover:shadow-xs transition">
+          <!-- Specialist 1: Dr. Kiran Kumar Dodda -->
+          <div class="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md hover:bg-white transition duration-300">
             <div>
-              <span class="text-[10px] font-bold text-teal-700 bg-teal-100/60 px-2 py-0.5 rounded-full inline-block mb-2">Orthodontist</span>
-              <h5 class="text-sm font-bold text-navy-900 leading-tight">Dr. Kiran Kumar Dodda</h5>
-              <p class="text-[11px] text-teal-600 font-semibold mt-0.5">MDS – Orthodontics</p>
-              <p class="text-[11px] text-slate-500 mt-2">Braces, Clear Aligners & Dentofacial Orthopedics</p>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <div class="w-12 h-12 rounded-xl bg-teal-100/70 text-teal-700 flex items-center justify-center text-xl shrink-0 font-bold border border-teal-200">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-bold text-teal-700 bg-teal-100/80 px-2.5 py-0.5 rounded-full inline-block uppercase tracking-wider">Orthodontist</span>
+                  <h5 class="text-base font-bold text-navy-900 leading-snug mt-0.5">Dr. Kiran Kumar Dodda</h5>
+                  <p class="text-xs text-teal-600 font-bold">MDS – Orthodontics</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Expert consultant for conventional and ceramic braces, clear aligners, malocclusion corrections, and dentofacial orthopedics.</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Clear Aligners</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Braces</span>
+              </div>
             </div>
-            <button data-open-modal data-doctor="Dr. Kiran Kumar Dodda" class="mt-3 w-full bg-white hover:bg-teal-600 hover:text-white text-teal-700 border border-teal-200 font-bold text-[11px] py-1.5 rounded-lg transition">
-              Book Visit
+            <button data-open-modal data-doctor="Dr. Kiran Kumar Dodda" class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs py-2.5 rounded-xl transition shadow-xs flex items-center justify-center gap-1.5">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Consultation</span>
             </button>
           </div>
 
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between hover:border-teal-300 hover:shadow-xs transition">
+          <!-- Specialist 2: Dr. Srikanth Koya -->
+          <div class="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md hover:bg-white transition duration-300">
             <div>
-              <span class="text-[10px] font-bold text-cyan-700 bg-cyan-100/60 px-2 py-0.5 rounded-full inline-block mb-2">Prosthodontist</span>
-              <h5 class="text-sm font-bold text-navy-900 leading-tight">Dr. Srikanth Koya</h5>
-              <p class="text-[11px] text-teal-600 font-semibold mt-0.5">MDS – Prosthodontics</p>
-              <p class="text-[11px] text-slate-500 mt-2">Full Mouth Rehab, Overdentures & Bridges</p>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <div class="w-12 h-12 rounded-xl bg-cyan-100/70 text-cyan-700 flex items-center justify-center text-xl shrink-0 font-bold border border-cyan-200">
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-bold text-cyan-700 bg-cyan-100/80 px-2.5 py-0.5 rounded-full inline-block uppercase tracking-wider">Prosthodontist</span>
+                  <h5 class="text-base font-bold text-navy-900 leading-snug mt-0.5">Dr. Srikanth Koya</h5>
+                  <p class="text-xs text-teal-600 font-bold">MDS – Prosthodontics</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Specialist in complete and partial dentures, full-mouth oral reconstructions, and implant-supported overdentures.</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Full Mouth Rehab</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Overdentures</span>
+              </div>
             </div>
-            <button data-open-modal data-doctor="Dr. Srikanth Koya" class="mt-3 w-full bg-white hover:bg-teal-600 hover:text-white text-teal-700 border border-teal-200 font-bold text-[11px] py-1.5 rounded-lg transition">
-              Book Visit
+            <button data-open-modal data-doctor="Dr. Srikanth Koya" class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs py-2.5 rounded-xl transition shadow-xs flex items-center justify-center gap-1.5">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Consultation</span>
             </button>
           </div>
 
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between hover:border-teal-300 hover:shadow-xs transition">
+          <!-- Specialist 3: Dr. Ravi Kiran V -->
+          <div class="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md hover:bg-white transition duration-300">
             <div>
-              <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100/60 px-2 py-0.5 rounded-full inline-block mb-2">Pediatric Dentist</span>
-              <h5 class="text-sm font-bold text-navy-900 leading-tight">Dr. Ravi Kiran V</h5>
-              <p class="text-[11px] text-teal-600 font-semibold mt-0.5">MDS – Pediatric</p>
-              <p class="text-[11px] text-slate-500 mt-2">Gentle Child Care, Pulpectomy & Sealants</p>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100/70 text-emerald-700 flex items-center justify-center text-xl shrink-0 font-bold border border-emerald-200">
+                  <i class="fa-solid fa-child"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-bold text-emerald-700 bg-emerald-100/80 px-2.5 py-0.5 rounded-full inline-block uppercase tracking-wider">Pediatric Dentist</span>
+                  <h5 class="text-base font-bold text-navy-900 leading-snug mt-0.5">Dr. Ravi Kiran V</h5>
+                  <p class="text-xs text-teal-600 font-bold">MDS – Pediatric Dentistry</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Dedicated to gentle children's dentistry, cavity prevention, pediatric pulpectomies, fluoride applications, and habit breakers.</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Kids Dentistry</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Fluoride Therapy</span>
+              </div>
             </div>
-            <button data-open-modal data-doctor="Dr. Ravi Kiran V" class="mt-3 w-full bg-white hover:bg-teal-600 hover:text-white text-teal-700 border border-teal-200 font-bold text-[11px] py-1.5 rounded-lg transition">
-              Book Visit
+            <button data-open-modal data-doctor="Dr. Ravi Kiran V" class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs py-2.5 rounded-xl transition shadow-xs flex items-center justify-center gap-1.5">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Consultation</span>
             </button>
           </div>
 
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between hover:border-teal-300 hover:shadow-xs transition">
+          <!-- Specialist 4: Dr. Satya Karthik M -->
+          <div class="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md hover:bg-white transition duration-300">
             <div>
-              <span class="text-[10px] font-bold text-blue-700 bg-blue-100/60 px-2 py-0.5 rounded-full inline-block mb-2">Endodontist</span>
-              <h5 class="text-sm font-bold text-navy-900 leading-tight">Dr. Satya Karthik M</h5>
-              <p class="text-[11px] text-teal-600 font-semibold mt-0.5">MDS – Endodontics</p>
-              <p class="text-[11px] text-slate-500 mt-2">Microscopic Root Canals & Re-RCT</p>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <div class="w-12 h-12 rounded-xl bg-blue-100/70 text-blue-700 flex items-center justify-center text-xl shrink-0 font-bold border border-blue-200">
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-bold text-blue-700 bg-blue-100/80 px-2.5 py-0.5 rounded-full inline-block uppercase tracking-wider">Endodontist</span>
+                  <h5 class="text-base font-bold text-navy-900 leading-snug mt-0.5">Dr. Satya Karthik M</h5>
+                  <p class="text-xs text-teal-600 font-bold">MDS – Endodontics</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Specialist in microscopic root canal therapy, complex canal curved anatomies, re-treatments, and aesthetic tooth restorations.</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Microscopic RCT</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Re-RCT</span>
+              </div>
             </div>
-            <button data-open-modal data-doctor="Dr. Satya Karthik M" class="mt-3 w-full bg-white hover:bg-teal-600 hover:text-white text-teal-700 border border-teal-200 font-bold text-[11px] py-1.5 rounded-lg transition">
-              Book Visit
+            <button data-open-modal data-doctor="Dr. Satya Karthik M" class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs py-2.5 rounded-xl transition shadow-xs flex items-center justify-center gap-1.5">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Consultation</span>
             </button>
           </div>
 
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between hover:border-teal-300 hover:shadow-xs transition">
+          <!-- Specialist 5: Dr. Prasanna -->
+          <div class="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md hover:bg-white transition duration-300">
             <div>
-              <span class="text-[10px] font-bold text-purple-700 bg-purple-100/60 px-2 py-0.5 rounded-full inline-block mb-2">Periodontist</span>
-              <h5 class="text-sm font-bold text-navy-900 leading-tight">Dr. Prasanna</h5>
-              <p class="text-[11px] text-teal-600 font-semibold mt-0.5">MDS – Periodontology</p>
-              <p class="text-[11px] text-slate-500 mt-2">Gum Flap Surgery & Bone Regeneration</p>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <div class="w-12 h-12 rounded-xl bg-purple-100/70 text-purple-700 flex items-center justify-center text-xl shrink-0 font-bold border border-purple-200">
+                  <i class="fa-solid fa-shield-virus"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-bold text-purple-700 bg-purple-100/80 px-2.5 py-0.5 rounded-full inline-block uppercase tracking-wider">Periodontist</span>
+                  <h5 class="text-base font-bold text-navy-900 leading-snug mt-0.5">Dr. Prasanna</h5>
+                  <p class="text-xs text-teal-600 font-bold">MDS – Periodontology</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Specialist in advanced gum therapy, surgical flap procedures, periodontal bone regeneration, and cosmetic gum contouring.</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Gum Flap Surgery</span>
+                <span class="bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded text-xs">Bone Grafting</span>
+              </div>
             </div>
-            <button data-open-modal data-doctor="Dr. Prasanna" class="mt-3 w-full bg-white hover:bg-teal-600 hover:text-white text-teal-700 border border-teal-200 font-bold text-[11px] py-1.5 rounded-lg transition">
-              Book Visit
+            <button data-open-modal data-doctor="Dr. Prasanna" class="mt-5 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs py-2.5 rounded-xl transition shadow-xs flex items-center justify-center gap-1.5">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Consultation</span>
             </button>
           </div>
 

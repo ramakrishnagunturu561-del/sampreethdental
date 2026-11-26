@@ -857,58 +857,73 @@
     </div>
   </section>
 
-  <!-- 7. Get In Touch Banner (Matching Image 1 Reference) -->
-  <section class="py-10 bg-slate-100 border-b border-slate-200">
+  <!-- 7. Get In Touch Banner (Enhanced & Prominent) -->
+  <section class="py-14 sm:py-16 bg-gradient-to-b from-slate-100 to-slate-200/60 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-6">
-        <h3 class="text-xl sm:text-2xl font-extrabold text-navy-900">Get In Touch</h3>
-        <p class="text-xs text-slate-600 mt-1">We're here to help you smile brighter!</p>
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-teal-600 bg-teal-50 px-3.5 py-1 rounded-full border border-teal-200 shadow-xs">Quick Assistance</span>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Get In Touch</h3>
+        <p class="text-sm sm:text-base text-slate-600 mt-1.5 max-w-xl mx-auto">We're here to help you smile brighter! Connect with our clinic team through any of the channels below.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-3.5 text-xs">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         
         <!-- Pill 1: Address -->
-        <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2.5 shadow-2xs">
-          <i class="fa-solid fa-location-dot text-teal-600 mt-0.5"></i>
+        <div class="p-5 bg-white rounded-2xl border border-slate-200/90 flex items-start gap-3.5 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
           <div>
-            <strong class="text-navy-900 block font-bold text-[11px]">Clinic Address</strong>
-            <span class="text-slate-600 text-[10px] leading-tight block mt-0.5">Patamata, Vijayawada - 10</span>
+            <strong class="text-navy-900 block font-bold text-sm">Clinic Address</strong>
+            <span class="text-slate-600 text-xs leading-relaxed block mt-1">#57-6-2, Venkata Sai Enclave, Patamata, Vijayawada - 520010</span>
           </div>
         </div>
 
         <!-- Pill 2: Phone -->
-        <a href="tel:+917995605888" class="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2.5 shadow-2xs hover:border-teal-500 transition">
-          <i class="fa-solid fa-phone text-teal-600 mt-0.5"></i>
+        <a href="tel:+917995605888" class="p-5 bg-white rounded-2xl border border-slate-200/90 flex items-start gap-3.5 shadow-sm hover:shadow-md hover:border-teal-500 transition group">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0 group-hover:bg-teal-600 group-hover:text-white transition">
+            <i class="fa-solid fa-phone"></i>
+          </div>
           <div>
-            <strong class="text-navy-900 block font-bold text-[11px]">Phone Number</strong>
-            <span class="text-teal-700 font-semibold text-[10px] block mt-0.5">+91 79956 05888</span>
+            <strong class="text-navy-900 block font-bold text-sm">Phone Number</strong>
+            <span class="text-teal-700 font-bold text-sm block mt-1">+91 79956 05888</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5">Click to Call Now</span>
           </div>
         </a>
 
         <!-- Pill 3: Email -->
-        <a href="mailto:drnadellaneelima@gmail.com" class="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2.5 shadow-2xs hover:border-teal-500 transition">
-          <i class="fa-regular fa-envelope text-teal-600 mt-0.5"></i>
-          <div>
-            <strong class="text-navy-900 block font-bold text-[11px]">Email Address</strong>
-            <span class="text-slate-600 text-[10px] truncate block mt-0.5">drnadellaneelima@gmail.com</span>
+        <a href="mailto:drnadellaneelima@gmail.com" class="email-trigger p-5 bg-white rounded-2xl border border-slate-200/90 flex items-start gap-3.5 shadow-sm hover:shadow-md hover:border-teal-500 transition group">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0 group-hover:bg-teal-600 group-hover:text-white transition">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="min-w-0">
+            <strong class="text-navy-900 block font-bold text-sm">Email Address</strong>
+            <span class="text-teal-700 font-bold text-xs truncate block mt-1">drnadellaneelima@gmail.com</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5">Click to Email or Copy</span>
           </div>
         </a>
 
         <!-- Pill 4: Hours -->
-        <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2.5 shadow-2xs">
-          <i class="fa-regular fa-clock text-teal-600 mt-0.5"></i>
+        <div class="p-5 bg-white rounded-2xl border border-slate-200/90 flex items-start gap-3.5 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0">
+            <i class="fa-regular fa-clock"></i>
+          </div>
           <div>
-            <strong class="text-navy-900 block font-bold text-[11px]">Working Hours</strong>
-            <span class="text-slate-600 text-[10px] block mt-0.5">10AM-1PM & 4:30PM-9PM</span>
+            <strong class="text-navy-900 block font-bold text-sm">Working Hours</strong>
+            <span class="text-slate-700 text-xs font-semibold block mt-1">Mon-Sat: 10AM-1PM & 4:30PM-9PM</span>
+            <span class="text-slate-500 text-[11px] block mt-0.5">Sun: 10AM-1PM</span>
           </div>
         </div>
 
         <!-- Pill 5: Google Maps -->
-        <a href="https://maps.google.com/?q=Sampreeth+dental+clinic+Patamata+Vijayawada" target="_blank" class="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2.5 shadow-2xs col-span-2 md:col-span-1 hover:border-teal-500 transition">
-          <i class="fa-solid fa-map-location-dot text-teal-600 mt-0.5"></i>
+        <a href="https://maps.google.com/?q=Sampreeth+dental+clinic+Patamata+Vijayawada" target="_blank" class="p-5 bg-white rounded-2xl border border-slate-200/90 flex items-start gap-3.5 shadow-sm hover:shadow-md hover:border-teal-500 transition group col-span-1 sm:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0 group-hover:bg-teal-600 group-hover:text-white transition">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
           <div>
-            <strong class="text-navy-900 block font-bold text-[11px]">Find Us on Google Maps</strong>
-            <span class="text-teal-700 font-semibold text-[10px] block mt-0.5">Get Directions →</span>
+            <strong class="text-navy-900 block font-bold text-sm">Find on Maps</strong>
+            <span class="text-teal-700 font-bold text-xs block mt-1">Opp: Sri Chaitanya School</span>
+            <span class="text-[11px] text-teal-600 font-semibold block mt-0.5">Get Driving Directions →</span>
           </div>
         </a>
 
