@@ -88,10 +88,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Appointment Booking Modal & Form Handling with WhatsApp Quick Book
   const appointmentModal = document.getElementById('appointment-modal');
+
+  // Synchronize and dynamically populate all doctor dropdowns from SAMPREETH_DOCTORS
+  const populateDoctorDropdowns = () => {
+    if (typeof SAMPREETH_DOCTORS === 'undefined' || !Array.isArray(SAMPREETH_DOCTORS)) return;
+
+    document.querySelectorAll('select[name="doctor_name"]').forEach(select => {
+      const currentValue = select.value;
+      // Preserve first "Any Available" if present, or create clean options list
+      select.innerHTML = '';
+      
+      const defaultOption = document.createElement('option');
+      defaultOption.value = 'Any Available Specialist';
+      defaultOption.textContent = 'Any Available Specialist Doctor';
+      select.appendChild(defaultOption);
+
+      SAMPREETH_DOCTORS.forEach(doc => {
+        const opt = document.createElement('option');
+        opt.value = `${doc.name} (${doc.badge})`;
+        opt.textContent = doc.dropdownLabel || `${doc.name} – ${doc.badge}`;
+        select.appendChild(opt);
+      });
+
+      if (currentValue && select.querySelector(`option[value="${currentValue}"]`)) {
+        select.value = currentValue;
+      }
+    });
+  };
+
+  populateDoctorDropdowns();
+
   document.querySelectorAll('[data-open-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (appointmentModal) appointmentModal.classList.remove('hidden');
+      if (appointmentModal) {
+        // If button specifies a doctor, pre-select it
+        const targetDoctor = btn.getAttribute('data-doctor');
+        if (targetDoctor) {
+          const doctorSelect = appointmentModal.querySelector('select[name="doctor_name"]');
+          if (doctorSelect) {
+            for (let i = 0; i < doctorSelect.options.length; i++) {
+              if (doctorSelect.options[i].value.includes(targetDoctor) || doctorSelect.options[i].text.includes(targetDoctor)) {
+                doctorSelect.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+        appointmentModal.classList.remove('hidden');
+      }
     });
   });
 
